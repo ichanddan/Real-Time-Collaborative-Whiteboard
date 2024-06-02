@@ -107,29 +107,34 @@ const Dashboard = () => {
 
   return (
     <div>
-      <h1>Dashboard</h1>
+      <h1 className='flex items-center justify-center mt-5 mb-10 text-4xl font-bold'>Dashboard</h1>
       <div>
-        <h2>Alerts by Signature</h2>
+        <h2 className='my-10 text-2xl font-bold'>Alerts by Signature</h2>
         <Bar data={prepareChartData(getAlertCountsBySignature(), 'Alerts by Signature')} />
       </div>
-      <div>
-        <h2>Alerts by Category</h2>
+      <div className='w-1/2'>
+        <h2 className='my-10 text-2xl font-bold'>Alerts by Category</h2>
+        <div className='flex justify-center items-center'>
         <Pie data={prepareChartData(getAlertCountsByCategory(), 'Alerts by Category')} />
+        </div>
       </div>
       <div>
-        <h2>Alerts by Severity</h2>
+        <h2 className='my-10 text-2xl font-bold'>Alerts by Severity</h2>
         <Bar data={prepareChartData(getAlertCountsBySeverity(), 'Alerts by Severity')} />
       </div>
       <div>
-        <h2>Alerts by Protocol</h2>
+        <h2 className='my-10 text-2xl font-bold'>Alerts by Protocol</h2>
+        <div className='w-1/2 flex items-center justify-center'>
         <Pie data={prepareChartData(getAlertCountsByProtocol(), 'Alerts by Protocol')} />
+          
+        </div>
       </div>
       <div>
-        <h2>Alerts by Source IP</h2>
+        <h2 className='my-10 text-2xl font-bold'>Alerts by Source IP</h2>
         <Bar data={prepareChartData(getAlertCountsBySrcIp(), 'Alerts by Source IP')} />
       </div>
       <div>
-        <h2>Alerts by Time of Day</h2>
+        <h2 className='my-10 text-2xl font-bold'>Alerts by Time of Day</h2>
         <Line data={prepareChartData(getAlertCountsByTime(), 'Alerts by Time of Day')} />
       </div>
     </div>
