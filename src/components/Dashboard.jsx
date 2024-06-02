@@ -10,10 +10,11 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await loadData();
+        const data = await loadData()
         if (Array.isArray(data)) {
           setAlerts(data);
         } else {
+          console.log(data)
           console.error("Fetched data is not an array:", data);
         }
       } catch (error) {
