@@ -1,0 +1,20 @@
+{
+    "timestamp": "2019-01-02T03:50:09.097718",
+    "flow_id": 52373568,
+    "in_iface": "eth0",
+    "event_type": "alert",
+    "src_ip": "8.42.77.171",
+    "src_port": 65036,
+    "dest_ip": "138.68.3.71",
+    "dest_port": 3306,
+    "proto": "TCP",
+    "alert": {
+      "action": "allowed",
+      "gid": 1,
+      "signature_id": 2010937,
+      "rev": 3,
+      "signature": "ET SCAN Suspicious inbound to mySQL port 3306",
+      "category": "Potentially Bad Traffic",
+      "severity": 2
+    }
+  }
