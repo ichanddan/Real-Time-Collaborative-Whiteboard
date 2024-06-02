@@ -13,9 +13,6 @@ const Dashboard = () => {
         const data = await loadData()
         if (Array.isArray(data)) {
           setAlerts(data);
-        } else {
-          console.log(data)
-          console.error("Fetched data is not an array:", data);
         }
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -32,8 +29,6 @@ const Dashboard = () => {
       if (alert.alert && alert.alert.signature) {
         const signature = alert.alert.signature;
         counts[signature] = (counts[signature] || 0) + 1;
-      } else {
-        console.error("Missing signature in alert:", alert);
       }
     });
     return counts;
@@ -45,8 +40,6 @@ const Dashboard = () => {
       if (alert.alert && alert.alert.category) {
         const category = alert.alert.category;
         counts[category] = (counts[category] || 0) + 1;
-      } else {
-        console.error("Missing category in alert:", alert);
       }
     });
     return counts;
@@ -58,8 +51,6 @@ const Dashboard = () => {
       if (alert.alert && alert.alert.severity !== undefined) {
         const severity = alert.alert.severity;
         counts[severity] = (counts[severity] || 0) + 1;
-      } else {
-        console.error("Missing severity in alert:", alert);
       }
     });
     return counts;
@@ -71,8 +62,6 @@ const Dashboard = () => {
       if (alert.proto) {
         const protocol = alert.proto;
         counts[protocol] = (counts[protocol] || 0) + 1;
-      } else {
-        console.error("Missing protocol in alert:", alert);
       }
     });
     return counts;
