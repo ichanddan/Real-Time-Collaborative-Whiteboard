@@ -106,7 +106,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div>
+    <div className='bg-black text-white'>
       <h1 className='flex items-center justify-center mt-5 mb-10 text-4xl font-bold'>Dashboard</h1>
       <div>
         <h2 className='my-10 text-2xl font-bold'>Alerts by Signature</h2>
@@ -135,7 +135,9 @@ const Dashboard = () => {
       </div>
       <div>
         <h2 className='my-10 text-2xl font-bold'>Alerts by Time of Day</h2>
-        <Line data={prepareChartData(getAlertCountsByTime(), 'Alerts by Time of Day')} />
+        <div className="bg-white p-4 rounded shadow-md">
+          <Line data={prepareChartData(getAlertCountsByTime(), 'Alerts by Time of Day')} />
+        </div>
       </div>
     </div>
   );
